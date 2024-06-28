@@ -1,0 +1,204 @@
+html, body, #app, #app>div {
+    height: 100%
+}
+  
+.banner{
+    display: flex;
+}
+
+body {
+    background-color: #7c74ff;
+}
+
+.title {
+    padding: 0px;
+    margin: 30px;
+}
+
+h1 , h2{
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h2, h1 {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 55%);
+}
+
+h2 {
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 100px;
+}
+
+.screen {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.file-form {
+    width: 400px;
+    height: 300px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+ul {
+    height: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    text-align: center;
+    height: 25px;
+    margin: 10px;
+    margin-bottom: 60px;
+}
+
+.file-form input[type="text"]{
+    border: 2px solid #7c74ff;
+    border-radius: 6px;
+    padding: 10px;
+    width: 80%;
+}
+
+.file-form input[type="file"]{
+    border: 1px solid #FFF;
+    border-radius: 6px;
+    padding: 10px;
+    width: 80%;
+}
+
+.file-form input[type="file"]::file-selector-button{
+    transition: all .2s ease-in;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    width: 50%;
+}
+
+.file-form input[type="file"]::file-selector-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color:#7c74ff;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+    width: 50%;
+}
+
+.file-form button {
+    transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+}
+
+.file-form button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color:#7c74ff;
+    color: white;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+}
+
+.file-form #edit:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color:#ebbc21;
+    color: white;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+}
+
+table {
+    justify-content: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 20%);
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+table tr th {
+    background-color: #e4e4e4;
+    height: 40px;
+    box-shadow: 0px 5px px rgba(0, 0, 0, 15%);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+table td {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Ubuntu';
+}
+table button {
+    margin: 2px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #464646;
+}
+
+table #delete {
+    transition: all .1s ease-in;
+    background-color: white;
+}
+
+table #delete:hover {
+    cursor: pointer;
+    background-color: #FF0000;
+    color: white;
+    border: 1px solid #FF0000;
+}
+
+table #download {
+    transition: all .1s ease-in;
+    background-color: white;
+}
+
+table #download:hover {
+    cursor: pointer;
+    background-color: #45c52c;
+    color: white;
+    border: 1px solid #45c52c;
+}
+
+table #edit {
+    transition: all .1s ease-in;
+    background-color: white;
+}
+
+table #edit:hover {
+    cursor: pointer;
+    background-color: #ebbc21;
+    color: white;
+    border: 1px solid #ebbc21;
+}
