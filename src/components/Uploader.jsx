@@ -24,7 +24,21 @@ const Uploader = () => {
         }
     }
 
+    const toNifi = async (file) => {
+        // NIFI
+        try {
+            await axios.post("http://localhost:8843/contentListener", file, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            })
+        } catch (error) {
+            console.log("NIFI ERROR",error);
+        }
+    }
+
     const uploadFiles = async (data) => {
+
         try {
             await axios.post("http://127.0.0.1:8000/api/upload-file/", data).then((response) => {
                 console.log(response);
@@ -90,6 +104,8 @@ const Uploader = () => {
     const handleUpload = (event) => {
         event.preventDefault();
         const formData = new FormData();
+        const fileData = new FormData();
+        fileData.append('file', file);
         formData.append('file', file);
         formData.append('name', name);
 
@@ -97,6 +113,7 @@ const Uploader = () => {
             updateFiles(selectedFile, file, name);
         } else {
             uploadFiles(formData);
+            toNifi(fileData);
         }
 
         setfile(null);
